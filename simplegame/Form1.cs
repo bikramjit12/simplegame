@@ -26,21 +26,21 @@ namespace simplegame
             btnFire.Enabled = true;
             btnload.Enabled = true;
             btnSpin.Enabled = true;
-            pictureBox1.ImageLocation = @"C:\Users\vicky\Desktop\ing\176195-004-413CA8DB.jpg";
-            pictureBox2.ImageLocation = @"C:\Users\vicky\Desktop\ing\download.jpg";
+            pictureBox1.ImageLocation = @"C:\Users\vicky\source\repos\simplegame\media\176195-004-413CA8DB.jpg";
+            pictureBox2.ImageLocation = @"C:\Users\vicky\source\repos\simplegame\media\download.jpg";
         }
 
         private void btnload_Click(object sender, EventArgs e)
         {
             btnSpin.Enabled = true;
             btnload.Enabled = false;
-            SoundPlayer splayer = new SoundPlayer(@"C:\Users\vicky\Desktop\ing\gun-cocking-01.wav");
+            SoundPlayer splayer = new SoundPlayer(@"C:\Users\vicky\source\repos\simplegame\media\gun-cocking-01.wav");
             splayer.Play();
             x = x + 1;
             if (x == 1)
             {
 
-                pictureBox1.ImageLocation = @"C:\Users\vicky\Desktop\ing\Russian_roulette_2500016b.jpg";
+                pictureBox1.ImageLocation = @"C:\Users\vicky\source\repos\simplegame\media\Russian_roulette_2500016b.jpg";
             }
         }
 
@@ -48,9 +48,9 @@ namespace simplegame
         {
             if (x > 0)
             {
-                SoundPlayer splayer = new SoundPlayer(@"C:\Users\vicky\Desktop\ing\Chambering A Round-SoundBible.com-854171848 (1).wav");
+                SoundPlayer splayer = new SoundPlayer(@"C:\Users\vicky\source\repos\simplegame\media\Chambering A Round-SoundBible.com-854171848 (1).wav");
                 splayer.Play();
-                pictureBox2.ImageLocation = @"C:\Users\vicky\Desktop\ing\barrel.jpg";
+                pictureBox2.ImageLocation = @"C:\Users\vicky\source\repos\simplegame\media\barrel.jpg";
             }
             else
             {
@@ -85,10 +85,10 @@ namespace simplegame
               
                 if (y == z && cunt < 2)
                 {
-                    pictureBox2.ImageLocation = @"C:\Users\vicky\Desktop\ing\download (1).jpg";
-                    pictureBox1.ImageLocation = @"C:\Users\vicky\Desktop\ing\Revolver.gif";
+                    pictureBox2.ImageLocation = @"C:\Users\vicky\source\repos\simplegame\media\download (1).jpg";
+                    pictureBox1.ImageLocation = @"C:\Users\vicky\source\repos\simplegame\media\Revolver.gif";
                     cunt++;
-                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\vicky\Desktop\ing\gun-gunshot-01.wav");
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\vicky\source\repos\simplegame\media\gun-gunshot-01.wav");
                     player.Play();
                     z = obj.fire();
                 }
@@ -98,16 +98,14 @@ namespace simplegame
                     MessageBox.Show("Game Over you won ");
                     btnFire.Enabled = false;
                 }
-                else if (cunt ==1 )
-                {
-                    MessageBox.Show("Game Over you loss ");
-                    btnFire.Enabled = false;
+                
+           
                 }
             }
 
         }
     }
-}
+
 
         
    
